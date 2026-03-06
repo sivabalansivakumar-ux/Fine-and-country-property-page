@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foxfield – Rudry Road, Lisvane | Fine & Country</title>
+<style>
+  @font-face {
+    font-family: 'CormorantFallback';
+    src: local('Georgia'), local('Times New Roman');
+  }
+</style>
+<style>
+  :root {
+    --navy: #1a2332;
+    --gold: #b8975a;
+    --gold-light: #d4af6e;
+    --cream: #faf8f4;
+    --white: #ffffff;
+    --mid-gray: #6b7280;
+    --light-gray: #f3f0ea;
+    --text-dark: #1a1a1a;
+    --border: #e5ddd0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ─── NAV ─── */
+  .topbar {
+    background: var(--navy);
+    color: #aab2be;
+    font-size: 11px;
+    padding: 6px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .topbar a { color: #aab2be; text-decoration: none; }
+  .topbar a:hover { color: var(--gold); }
+
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-mark span {
+    color: var(--gold);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .logo-text {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 20px;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+  .logo-text small {
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-top: -2px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { border-color: var(--gold); color: var(--gold); }
+  .nav-cta {
+    background: var(--navy);
+    color: var(--white) !important;
+    padding: 10px 22px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.18em !important;
+    border-bottom: none !important;
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb {
+    background: var(--white);
+    padding: 12px 40px;
+    font-size: 11px;
+    color: var(--mid-gray);
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--border);
+  }
+  .breadcrumb a { color: var(--mid-gray); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb span { color: var(--gold); margin: 0 6px; }
+
+  /* ─── HERO GALLERY ─── */
+  .hero-gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 260px 260px;
+    gap: 3px;
+    background: #000;
+  }
+  .hero-gallery .main-img {
+    grid-row: 1 / 3;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2332 40%, #3d5a80 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-gallery .main-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      url('https://cdn.members.nurtur.tech/properties/7/799/5766/4581314/IMG_1nbY0sdYTA5ZkbkH_larger.jpg') center/cover no-repeat,
+      linear-gradient(160deg, #2e3f55 0%, #1a2e42 35%, #3a5068 60%, #263445 100%);
+    opacity: 0.9;
+  }
+  .hero-gallery .main-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26,35,50,0.65) 0%, transparent 60%);
+  }
+  .hero-gallery .main-img .hero-placeholder {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 30% 60%, rgba(60,90,70,0.5) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 30%, rgba(80,70,50,0.4) 0%, transparent 50%),
+      linear-gradient(160deg, #2a3d52 0%, #1a2e42 40%, #3a5a40 70%, #263445 100%);
+    z-index: 0;
+  }
+  .hero-gallery .main-img .hero-placeholder::after {
+    content: 'FOXFIELD · LISVANE · CARDIFF';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Palatino Linotype', Georgia, serif;
+    font-size: 22px;
+    letter-spacing: 0.22em;
+    color: rgba(255,255,255,0.18);
+    white-space: nowrap;
+    font-style: italic;
+  }
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-gallery .thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.85;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+  }
+  .hero-gallery .thumb:hover::before { transform: scale(1.04); }
+  .thumb-1::before { background-image: url('https://cdn.members.nurtur.tech/properties/7/799/5766/4581314/IMG_Tgjx6YtFxI8sKuVI_larger.jpg'), linear-gradient(140deg, #3a5a40 0%, #2c4a30 100%); }
+  .thumb-2::before { background-image: url('https://cdn.members.nurtur.tech/properties/7/799/5766/4581314/IMG_1nbY0sdYTA5ZkbkH_larger.jpg'), linear-gradient(140deg, #2c4a6e 0%, #1a2e42 100%); filter: brightness(0.9); }
+  .thumb-3::before { background-image: url('https://cdn.members.nurtur.tech/properties/7/799/5766/4581314/IMG_Tgjx6YtFxI8sKuVI_larger.jpg'), linear-gradient(140deg, #4a3a28 0%, #3a2a1a 100%); filter: brightness(0.85); }
+  .thumb-4::before { background-image: url('https://cdn.members.nurtur.tech/properties/7/799/5766/4581314/IMG_1nbY0sdYTA5ZkbkH_larger.jpg'), linear-gradient(140deg, #2a3d52 0%, #1a2e42 100%); filter: brightness(0.8); }
+
+  .gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    padding: 8px 14px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .gallery-badge {
+    position: relative;
+    z-index: 3;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    font-weight: 700;
+  }
+
+  /* ─── PROPERTY HEADER ─── */
+  .property-header {
+    background: var(--white);
+    padding: 36px 40px 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .prop-tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .prop-title {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+  }
+  .prop-address {
+    font-size: 14px;
+    color: var(--mid-gray);
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+  .prop-price-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .prop-price {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 42px;
+    color: var(--navy);
+    font-weight: 500;
+    line-height: 1;
+  }
+  .prop-price small {
+    font-size: 15px;
+    color: var(--mid-gray);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    display: block;
+    letter-spacing: 0.06em;
+  }
+  .prop-stats {
+    display: flex;
+    gap: 32px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 32px;
+    color: var(--navy);
+    font-weight: 500;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-top: 2px;
+    font-weight: 600;
+  }
+  .stat-divider {
+    width: 1px;
+    background: var(--border);
+    margin: 4px 0;
+  }
+  .prop-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 28px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold); }
+  .btn-outline {
+    background: transparent;
+    color: var(--navy);
+    padding: 11px 24px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border: 1.5px solid var(--navy);
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { background: var(--navy); color: var(--white); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--mid-gray);
+    padding: 11px 20px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border: 1.5px solid var(--border);
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+  }
+
+  /* ─── QUICK TABS ─── */
+  .quick-tabs {
+    background: var(--white);
+    border-bottom: 2px solid var(--border);
+    padding: 0 40px;
+    display: flex;
+    gap: 0;
+  }
+  .quick-tab {
+    padding: 14px 22px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--mid-gray);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+  }
+  .quick-tab:hover, .quick-tab.active { color: var(--navy); border-bottom-color: var(--gold); }
+
+  /* ─── MAIN LAYOUT ─── */
+  .main-layout {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 40px;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* ─── SECTION HEADERS ─── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .section-header h2 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+  }
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .section-gold-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ─── SNAPSHOT CARD ─── */
+  .snapshot-card {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .snapshot-card::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(184,151,90,0.2);
+    border-radius: 50%;
+  }
+  .snapshot-card::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(184,151,90,0.15);
+    border-radius: 50%;
+  }
+  .snapshot-title {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .snap-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .snap-item:nth-last-child(-n+2) { border-bottom: none; }
+  .snap-key {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    font-weight: 600;
+  }
+  .snap-val {
+    font-size: 13px;
+    color: var(--white);
+    font-weight: 500;
+  }
+  .snap-val.gold { color: var(--gold-light); font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif; font-size: 16px; font-weight: 600; }
+
+  /* ─── KEY FEATURES ─── */
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+    background: var(--white);
+  }
+  .feature-item {
+    padding: 12px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-dark);
+    line-height: 1.5;
+  }
+  .feature-item:nth-child(odd) { border-right: 1px solid var(--border); }
+  .feature-item:nth-last-child(-n+2) { border-bottom: none; }
+  .feature-bullet {
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  /* ─── DESCRIPTION ─── */
+  .description-section {
+    background: var(--white);
+    padding: 32px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+  }
+  .description-section p {
+    font-size: 14px;
+    line-height: 1.85;
+    color: #3a3a3a;
+    margin-bottom: 18px;
+  }
+  .description-section p:last-child { margin-bottom: 0; }
+
+  /* ─── MAP ─── */
+  .map-section {
+    margin-bottom: 32px;
+  }
+  .map-placeholder {
+    width: 100%;
+    height: 360px;
+    background: #e8e4da;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .map-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .map-overlay-label {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 8px 16px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  /* ─── NEARBY HIGHLIGHTS ─── */
+  .location-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+    margin-bottom: 32px;
+  }
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .loc-group h4 {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
+  .loc-group ul {
+    list-style: none;
+    padding: 0;
+  }
+  .loc-group ul li {
+    font-size: 12.5px;
+    color: #444;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    line-height: 1.4;
+  }
+  .loc-group ul li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ─── MARKET INSIGHTS ─── */
+  .insights-section {
+    background: var(--light-gray);
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-bottom: 32px;
+  }
+  .demand-meter {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .demand-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); min-width: 120px; }
+  .demand-bar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .demand-fill { height: 100%; width: 82%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 3px; }
+  .demand-pct { font-size: 13px; font-weight: 700; color: var(--gold); min-width: 40px; text-align: right; }
+  .buyer-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .chip {
+    background: var(--navy);
+    color: var(--white);
+    font-size: 10px;
+    padding: 6px 14px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  /* ─── LAYOUT ─── */
+  .layout-section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+    margin-bottom: 32px;
+  }
+  .floor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 16px;
+  }
+  .floor-block {
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+    background: var(--light-gray);
+  }
+  .floor-block h4 {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .floor-block ul {
+    list-style: none;
+    padding: 0;
+  }
+  .floor-block ul li {
+    font-size: 12.5px;
+    color: #444;
+    padding: 2px 0;
+    display: flex;
+    gap: 6px;
+  }
+  .floor-block ul li::before {
+    content: '–';
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ─── FAQ ─── */
+  .faq-section {
+    margin-bottom: 32px;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    overflow: hidden;
+  }
+  .faq-item:first-of-type { border-top: 1px solid var(--border); }
+  .faq-q {
+    padding: 18px 20px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.02em;
+    user-select: none;
+    transition: background 0.18s, color 0.18s;
+    gap: 16px;
+  }
+  .faq-q:hover { background: var(--light-gray); color: var(--gold); }
+  .faq-icon {
+    width: 26px;
+    height: 26px;
+    border: 1.5px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s, transform 0.28s cubic-bezier(0.4,0,0.2,1);
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+  }
+  .faq-item.open .faq-q { color: var(--gold); background: var(--light-gray); }
+  .faq-item.open .faq-icon {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--white);
+    transform: rotate(45deg);
+  }
+  .faq-a {
+    padding: 0 20px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.75;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.32s cubic-bezier(0.4,0,0.2,1), padding 0.2s;
+  }
+  .faq-item.open .faq-a {
+    max-height: 200px;
+    padding: 0 20px 18px;
+  }
+
+  /* ─── SIDEBAR ─── */
+  .sidebar { position: sticky; top: 90px; }
+  .agent-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .agent-header {
+    background: var(--navy);
+    padding: 20px 24px;
+    color: var(--white);
+  }
+  .agent-header .brand-tag {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .agent-header h3 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+  .agent-header .agent-branch {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 3px;
+    letter-spacing: 0.05em;
+  }
+  .agent-body { padding: 20px 24px; }
+  .agent-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .agent-actions .btn-primary { text-align: center; font-size: 10px; padding: 14px; }
+  .agent-actions .btn-outline { text-align: center; font-size: 10px; padding: 13px; }
+  .agent-contact-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+  }
+  .agent-contact-row a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .agent-contact-row a:hover { color: var(--gold); }
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--light-gray);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  /* ─── PROPERTY DETAILS SIDEBAR ─── */
+  .details-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 22px 24px;
+    margin-bottom: 20px;
+  }
+  .details-card h4 {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--light-gray);
+    font-size: 12.5px;
+  }
+  .detail-row:last-child { border-bottom: none; }
+  .detail-row .d-label { color: var(--mid-gray); font-weight: 500; }
+  .detail-row .d-val { font-weight: 700; color: var(--navy); }
+  .epc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #4caf50;
+    color: white;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  /* ─── CALCULATORS ─── */
+  .calc-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .calc-header {
+    background: var(--light-gray);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+    border-bottom: 1px solid transparent;
+  }
+  .calc-header:hover { background: #ece7dd; }
+  .calc-card.open .calc-header { border-bottom-color: var(--border); }
+  .calc-header h4 {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 700;
+    flex: 1;
+  }
+  .calc-chevron {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 16px;
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+    flex-shrink: 0;
+    font-weight: 300;
+    line-height: 1;
+  }
+  .calc-card.open .calc-chevron { transform: rotate(180deg); }
+  .calc-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: white;
+    flex-shrink: 0;
+  }
+  .calc-body {
+    padding: 20px;
+    display: none;
+    animation: slideDown 0.28s cubic-bezier(0.4,0,0.2,1);
+  }
+  .calc-card.open .calc-body { display: block; }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .calc-field {
+    margin-bottom: 14px;
+  }
+  .calc-field label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .calc-field input, .calc-field select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    color: var(--navy);
+    background: var(--cream);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .calc-field input:focus, .calc-field select:focus { border-color: var(--gold); }
+  .calc-result {
+    background: var(--navy);
+    color: white;
+    padding: 14px 16px;
+    margin-top: 4px;
+  }
+  .calc-result .res-label {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  .calc-result .res-val {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 26px;
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+  .term-pills {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .term-pill {
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    font-size: 11px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .term-pill.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+  /* ─── VALUATION BANNER ─── */
+  .valuation-banner {
+    background: linear-gradient(135deg, var(--navy) 0%, #2c4a6e 100%);
+    color: white;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(184,151,90,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .valuation-banner::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(184,151,90,0.2);
+    border-radius: 50%;
+  }
+  .valuation-banner p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .valuation-banner .btn-gold {
+    background: var(--gold);
+    color: white;
+    padding: 11px 20px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .valuation-banner .btn-gold:hover { background: var(--gold-light); }
+  .valuation-banner h4 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: white;
+    letter-spacing: 0.03em;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.65);
+    padding: 48px 40px 24px;
+    margin-top: 60px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+  }
+  footer h5 {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 8px; }
+  footer ul li a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+  }
+  footer ul li a:hover { color: var(--gold); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.4);
+  }
+  .footer-logo-text {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    font-size: 22px;
+    color: var(--white);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .footer-logo-text span { color: var(--gold); }
+  .footer-address { font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.5); }
+
+  /* ─── RESPONSIVE TWEAKS ─── */
+  @media (max-width: 900px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .sidebar { position: static; }
+    .hero-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 240px; }
+    .hero-gallery .main-img { grid-column: 1 / 3; grid-row: 1; }
+    .thumb-3, .thumb-4 { display: none; }
+  }
+
+  /* ─── GOLD RULE ─── */
+  .gold-rule {
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+    margin-bottom: 24px;
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div style="display:flex;gap:20px">
+    <a href="#">Fine & Country UK</a>
+    <a href="#">Find an Agent</a>
+    <a href="#">Global</a>
+  </div>
+  <div style="display:flex;gap:20px">
+    <a href="#">MyF&C</a>
+    <a href="#">+44 29 2169 0690</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-mark"><span>F&C</span></div>
+    <div class="logo-text">
+      Fine &amp; Country
+      <small>Cardiff &amp; Newport</small>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">Properties for Sale</a></li>
+    <li><a href="#">Value My Property</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#" class="nav-cta">Book Valuation</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">Home</a><span>›</span>
+  <a href="#">Properties for Sale</a><span>›</span>
+  <a href="#">Cardiff and Newport</a><span>›</span>
+  Foxfield, Rudry Road, Lisvane
+</div>
+
+<!-- HERO GALLERY -->
+<div class="hero-gallery">
+  <div class="main-img">
+    <div class="hero-placeholder"></div>
+    <div style="position:relative;z-index:3">
+      <div class="gallery-badge">Offers Over £8,000,000</div>
+    </div>
+    <div class="gallery-overlay">View All 54 Photos ›</div>
+  </div>
+  <div class="thumb thumb-1"></div>
+  <div class="thumb thumb-2"></div>
+  <div class="thumb thumb-3"></div>
+  <div class="thumb thumb-4"></div>
+</div>
+
+<!-- PROPERTY HEADER -->
+<div class="property-header">
+  <div style="max-width:1280px;margin:0 auto">
+    <div class="prop-tag">Detached House · Lisvane, CF14 · Freehold</div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px">
+      <div>
+        <h1 class="prop-title">Foxfield</h1>
+        <div class="prop-address">Rudry Road, Lisvane, Cardiff, CF14</div>
+      </div>
+      <div style="text-align:right">
+        <div class="prop-price">
+          <small>Offers Over</small>
+          £8,000,000
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:40px;margin-bottom:20px;flex-wrap:wrap">
+      <div class="prop-stats">
+        <div class="stat-item">
+          <div class="stat-num">7</div>
+          <div class="stat-label">Bedrooms</div>
+        </div>
+        <div class="stat-divider" style="height:40px;width:1px;background:var(--border)"></div>
+        <div class="stat-item">
+          <div class="stat-num">11</div>
+          <div class="stat-label">Bathrooms</div>
+        </div>
+        <div class="stat-divider" style="height:40px;width:1px;background:var(--border)"></div>
+        <div class="stat-item">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Receptions</div>
+        </div>
+        <div class="stat-divider" style="height:40px;width:1px;background:var(--border)"></div>
+        <div class="stat-item">
+          <div class="stat-num">24</div>
+          <div class="stat-label">Acres</div>
+        </div>
+        <div class="stat-divider" style="height:40px;width:1px;background:var(--border)"></div>
+        <div class="stat-item">
+          <div class="stat-num">24,190</div>
+          <div class="stat-label">Sq Ft</div>
+        </div>
+      </div>
+    </div>
+    <div class="prop-actions">
+      <a href="#" class="btn-primary">Book a Viewing</a>
+      <button class="btn-outline">Request a Call Back</button>
+      <button class="btn-ghost">♡ Save Property</button>
+      <button class="btn-ghost">↗ Share</button>
+      <button class="btn-ghost">⎙ Print Details</button>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK TABS -->
+<div class="quick-tabs">
+  <div class="quick-tab active">Description</div>
+  <div class="quick-tab">Gallery</div>
+  <div class="quick-tab">Floorplan</div>
+  <div class="quick-tab">Location</div>
+  <div class="quick-tab">Video Tour</div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+  <!-- LEFT COLUMN -->
+  <div>
+
+    <!-- QUICK SNAPSHOT -->
+    <div class="snapshot-card">
+      <div class="snapshot-title">Quick Property Snapshot</div>
+      <div class="snapshot-grid">
+        <div class="snap-item">
+          <span class="snap-key">Property Type</span>
+          <span class="snap-val">Detached House</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">Price</span>
+          <span class="snap-val gold">Offers Over £8,000,000</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">Bedrooms</span>
+          <span class="snap-val">7</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">Bathrooms</span>
+          <span class="snap-val">11</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">Total Floor Area</span>
+          <span class="snap-val">24,190 sq ft / 2,247 sqm</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">EPC Rating</span>
+          <span class="snap-val">C</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">Tenure</span>
+          <span class="snap-val">Freehold</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">Council Tax Band</span>
+          <span class="snap-val">I</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">Availability</span>
+          <span class="snap-val" style="color:#6fcf97">Available</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-key">Build</span>
+          <span class="snap-val">Built 1999 (Resale)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEY FEATURES -->
+    <div class="section-header">
+      <div class="section-gold-dot"></div>
+      <h2>Key Property Features</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item"><div class="feature-bullet"></div>Seven bedrooms each with en-suite bathrooms</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Two dedicated home offices</div>
+      <div class="feature-item"><div class="feature-bullet"></div>24 acres of private gated grounds</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Three ponds and mature landscaped gardens</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Private tennis court</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Large drawing room and formal dining room</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Orangery and spacious kitchen with breakfast area</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Large recreational space with bar and seating</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Yoga studio / flexible wellness space</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Undercroft valet-style car garage</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Lift servicing all floors</div>
+      <div class="feature-item"><div class="feature-bullet"></div>Prime Lisvane location with excellent schools</div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="section-header">
+      <div class="section-gold-dot"></div>
+      <h2>Property Description</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="description-section">
+      <p>Foxfield is an extraordinary gated residence set within approximately 24 acres of private grounds in the highly sought-after suburb of Lisvane. Built in 1999 with exceptional craftsmanship and attention to detail, the property combines timeless architectural elegance with modern comforts, creating an impressive family home designed for both luxurious living and entertaining.</p>
+      <p>The grand entrance hall immediately showcases the home's scale and character, featuring a handcrafted American white oak staircase spanning three floors and enhanced by natural light from above. The main reception areas include a large drawing room that connects to the formal dining room through double doors, creating an ideal setting for hosting drinks receptions, celebrations, and formal dinners.</p>
+      <p>At the heart of the home is the spacious kitchen and breakfast room, which flows into an informal sitting area designed for everyday family life. The property offers seven generously sized bedrooms, each with its own en-suite bathroom, alongside two dedicated home offices that support modern work-from-home lifestyles.</p>
+      <p>The upper level of the house provides a large recreational space complete with a bar and seating area, making it an ideal venue for entertaining guests. A separate room on this floor is currently used as a yoga studio, providing additional flexibility for wellness, leisure, or hobbies.</p>
+      <p>Outside, Foxfield continues to impress with its expansive grounds featuring three picturesque ponds, manicured lawns, mature landscaping, and a private tennis court. A sweeping driveway leads to an undercroft valet-style garage that provides secure storage for multiple vehicles. The estate's extensive acreage also offers potential for equestrian use, outdoor recreation, or simply enjoying the privacy and tranquillity of the surrounding natural landscape.</p>
+    </div>
+
+    <!-- MAP -->
+    <div class="map-section">
+      <div class="section-header">
+        <div class="section-gold-dot"></div>
+        <h2>Location Map</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="map-placeholder">
+        <svg width="100%" height="100%" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" style="display:block">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d8d0c4" stroke-width="0.8"/>
+            </pattern>
+          </defs>
+          <!-- Base -->
+          <rect width="900" height="360" fill="#e8e2d8"/>
+          <rect width="900" height="360" fill="url(#grid)"/>
+          <!-- Main roads -->
+          <path d="M0 195 Q220 185 430 180 Q620 175 900 170" stroke="#c5bfb4" stroke-width="10" fill="none"/>
+          <path d="M0 195 Q220 185 430 180 Q620 175 900 170" stroke="#f5f0e8" stroke-width="6" fill="none"/>
+          <path d="M430 0 Q432 90 430 180 Q428 270 425 360" stroke="#c5bfb4" stroke-width="8" fill="none"/>
+          <path d="M430 0 Q432 90 430 180 Q428 270 425 360" stroke="#f5f0e8" stroke-width="5" fill="none"/>
+          <!-- Secondary roads -->
+          <path d="M100 80 Q260 130 340 180 Q420 230 490 290 Q560 340 640 360" stroke="#d0c9be" stroke-width="5" fill="none"/>
+          <path d="M100 80 Q260 130 340 180 Q420 230 490 290 Q560 340 640 360" stroke="#f8f4ed" stroke-width="3" fill="none"/>
+          <path d="M0 280 Q150 260 280 220 Q380 185 480 160 Q580 135 700 110 Q800 90 900 80" stroke="#d0c9be" stroke-width="5" fill="none"/>
+          <path d="M0 280 Q150 260 280 220 Q380 185 480 160 Q580 135 700 110 Q800 90 900 80" stroke="#f8f4ed" stroke-width="3" fill="none"/>
+          <!-- Green areas -->
+          <ellipse cx="200" cy="260" rx="90" ry="55" fill="#c8d8b8" opacity="0.7"/>
+          <ellipse cx="680" cy="100" rx="70" ry="45" fill="#c8d8b8" opacity="0.6"/>
+          <ellipse cx="750" cy="270" rx="60" ry="40" fill="#c8d8b8" opacity="0.55"/>
+          <!-- Water features -->
+          <ellipse cx="160" cy="240" rx="22" ry="14" fill="#aac8e0" opacity="0.7"/>
+          <ellipse cx="185" cy="255" rx="15" ry="10" fill="#aac8e0" opacity="0.6"/>
+          <ellipse cx="170" cy="270" rx="18" ry="11" fill="#aac8e0" opacity="0.65"/>
+          <!-- Property marker -->
+          <circle cx="430" cy="180" r="22" fill="rgba(26,35,50,0.15)"/>
+          <circle cx="430" cy="180" r="14" fill="#1a2332"/>
+          <circle cx="430" cy="180" r="6" fill="#b8975a"/>
+          <!-- Pin -->
+          <path d="M430 155 Q444 155 444 169 Q444 183 430 198 Q416 183 416 169 Q416 155 430 155Z" fill="#1a2332"/>
+          <circle cx="430" cy="168" r="5" fill="#b8975a"/>
+          <!-- Label -->
+          <rect x="330" y="200" width="200" height="28" rx="4" fill="#1a2332" opacity="0.92"/>
+          <text x="430" y="219" text-anchor="middle" font-family="Palatino Linotype, Georgia, serif" font-size="12" fill="#b8975a" font-weight="600">Foxfield, Rudry Road CF14</text>
+          <!-- Compass -->
+          <circle cx="855" cy="42" r="22" fill="white" opacity="0.85"/>
+          <text x="855" y="35" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#1a2332">N</text>
+          <path d="M855 38 L851 52 L855 50 L859 52Z" fill="#1a2332"/>
+          <!-- Scale -->
+          <rect x="20" y="330" width="80" height="4" fill="#888" rx="2"/>
+          <text x="60" y="325" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#666">0.5 km</text>
+        </svg>
+        <div class="map-overlay-label">📍 Foxfield, Rudry Road, Lisvane CF14</div>
+      </div>
+    </div>
+
+    <!-- NEARBY HIGHLIGHTS -->
+    <div class="location-card">
+      <div class="section-header" style="margin-bottom:0">
+        <div class="section-gold-dot"></div>
+        <h2>Nearby Location Highlights</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="location-grid">
+        <div class="loc-group">
+          <h4>Amenities</h4>
+          <ul>
+            <li>Lisvane area amenities</li>
+            <li>Cardiff city centre access</li>
+            <li>Local shopping &amp; dining</li>
+          </ul>
+        </div>
+        <div class="loc-group">
+          <h4>Transport</h4>
+          <ul>
+            <li>Cardiff city centre links</li>
+            <li>Lisvane &amp; Thornhill rail station</li>
+            <li>M4 motorway access</li>
+          </ul>
+        </div>
+        <div class="loc-group">
+          <h4>Schools</h4>
+          <ul>
+            <li>Lisvane catchment schools</li>
+            <li>Highly rated local primaries</li>
+            <li>Cardiff independent schools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROPERTY LAYOUT -->
+    <div class="layout-section">
+      <div class="section-header">
+        <div class="section-gold-dot"></div>
+        <h2>Property Layout</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="floor-grid">
+        <div class="floor-block">
+          <h4>Basement</h4>
+          <ul>
+            <li>Large Undercroft Valet Garage</li>
+            <li>Cellar / Storage Areas</li>
+            <li>Plant / Utility Areas</li>
+          </ul>
+        </div>
+        <div class="floor-block">
+          <h4>Ground Floor</h4>
+          <ul>
+            <li>Grand Entrance Hall</li>
+            <li>Drawing Room</li>
+            <li>Dining Room</li>
+            <li>Kitchen and Breakfast Room</li>
+            <li>Informal Sitting Area</li>
+            <li>Orangery</li>
+            <li>Two Home Offices</li>
+            <li>Lift Access</li>
+          </ul>
+        </div>
+        <div class="floor-block">
+          <h4>First Floor</h4>
+          <ul>
+            <li>Landing</li>
+            <li>Multiple Bedroom Suites</li>
+            <li>En-suite Bathrooms</li>
+          </ul>
+        </div>
+        <div class="floor-block">
+          <h4>Second Floor</h4>
+          <ul>
+            <li>Large Recreational Space</li>
+            <li>Bar and Seating Area</li>
+            <li>Yoga Studio / Studio Room</li>
+            <li>Additional Bedroom Suites</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARKET INSIGHTS -->
+    <div class="insights-section">
+      <div class="section-header">
+        <div class="section-gold-dot"></div>
+        <h2>Property Market Insights</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div style="margin-bottom:20px">
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);font-weight:700;margin-bottom:10px">Typical Buyers</div>
+        <div class="buyer-chips">
+          <div class="chip">High-net-worth families</div>
+          <div class="chip">Luxury estate seekers</div>
+          <div class="chip">Private gated home buyers</div>
+          <div class="chip">Countryside near city</div>
+        </div>
+      </div>
+
+      <div class="demand-meter">
+        <span class="demand-label">Local Demand</span>
+        <div class="demand-bar"><div class="demand-fill"></div></div>
+        <span class="demand-pct">High</span>
+      </div>
+
+      <p style="font-size:13.5px;line-height:1.85;color:#3a3a3a">Lisvane is widely regarded as one of the most prestigious residential areas in Cardiff, known for its spacious homes, green surroundings, and strong reputation for high-quality schooling. Properties in this area are often sought after by families and professionals looking for privacy and space while still benefiting from access to Cardiff's business, cultural, and transport hubs. Large estates with extensive land are particularly rare, making properties such as Foxfield highly distinctive within the local market.</p>
+    </div>
+
+    <!-- FAQs -->
+    <div class="faq-section">
+      <div class="section-header">
+        <div class="section-gold-dot"></div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What type of buyer would this property suit best?<span class="faq-icon">+</span></div>
+        <div class="faq-a">This property would suit buyers seeking a luxury private estate with extensive grounds and high-end living space close to Cardiff.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How large is the property estate?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The property sits within approximately 24 acres of private gated grounds.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How many bedrooms does the property have?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The house includes seven bedrooms, each with its own en-suite bathroom.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does the property have space for working from home?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes, the property includes two dedicated home offices.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Are there facilities for recreation or entertaining?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes, the house features large reception rooms, a recreational space with a bar, a yoga studio, and extensive outdoor areas including a tennis court.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is parking available on the property?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes, the property includes a large undercroft valet-style garage with space for multiple vehicles.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What outdoor features does the estate include?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The grounds include three ponds, landscaped gardens, manicured lawns, and a private tennis court.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How well connected is the location?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The property is located in Lisvane, which provides convenient access to Cardiff and nearby transport links.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Are there good schools nearby?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes, the Lisvane area is known for its excellent local schools.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Could the land support outdoor or equestrian activities?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The expansive grounds provide potential for a range of outdoor uses, including leisure or equestrian pursuits.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- AGENT CARD -->
+    <div class="agent-card">
+      <div class="agent-header">
+        <div class="brand-tag">Fine &amp; Country</div>
+        <h3>Cardiff &amp; Newport</h3>
+        <div class="agent-branch">Sophia House, 28 Cathedral Road, Cardiff</div>
+      </div>
+      <div class="agent-body">
+        <div class="agent-actions">
+          <a href="#" class="btn-primary">Book a Viewing</a>
+          <button class="btn-outline">Request a Call Back</button>
+        </div>
+        <div class="agent-contact-row">
+          <a href="tel:+442921690690">
+            <span class="contact-icon">📞</span>
+            +44 29 2169 0690
+          </a>
+          <a href="#">
+            <span class="contact-icon">✉</span>
+            cardiff@fineandcountry.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROPERTY DETAILS -->
+    <div class="details-card">
+      <h4>Property Details</h4>
+      <div class="detail-row">
+        <span class="d-label">Ref</span>
+        <span class="d-val">a103daa5</span>
+      </div>
+      <div class="detail-row">
+        <span class="d-label">Tenure</span>
+        <span class="d-val">Freehold</span>
+      </div>
+      <div class="detail-row">
+        <span class="d-label">Council Tax</span>
+        <span class="d-val">Band I</span>
+      </div>
+      <div class="detail-row">
+        <span class="d-label">EPC Rating</span>
+        <span class="d-val"><span class="epc-badge">C</span></span>
+      </div>
+      <div class="detail-row">
+        <span class="d-label">Floor Area</span>
+        <span class="d-val">24,190 sq ft</span>
+      </div>
+      <div class="detail-row">
+        <span class="d-label">Grounds</span>
+        <span class="d-val">~24 Acres</span>
+      </div>
+      <div class="detail-row">
+        <span class="d-label">Year Built</span>
+        <span class="d-val">1999</span>
+      </div>
+    </div>
+
+    <!-- VALUATION BANNER -->
+    <div class="valuation-banner">
+      <h4>Has your property's value increased?</h4>
+      <p>Find out how much your property is worth with a free valuation from our local experts.</p>
+      <a href="#" class="btn-gold">Book a Property Valuation</a>
+    </div>
+
+    <!-- MORTGAGE CALCULATOR -->
+    <div class="calc-card" id="mortgageCalc">
+      <div class="calc-header" onclick="toggleCalc('mortgageCalc')">
+        <div class="calc-icon">£</div>
+        <h4>Mortgage Calculator</h4>
+        <span class="calc-chevron">&#8964;</span>
+      </div>
+      <div class="calc-body">
+        <div class="calc-field">
+          <label>Property Price</label>
+          <input type="text" value="£8,000,000">
+        </div>
+        <div class="calc-field">
+          <label>Deposit</label>
+          <input type="text" value="£1,600,000">
+        </div>
+        <div class="calc-field">
+          <label>Annual Interest Rate</label>
+          <input type="text" value="4.5%">
+        </div>
+        <div class="calc-field">
+          <label>Mortgage Term</label>
+          <div class="term-pills">
+            <div class="term-pill">5yr</div>
+            <div class="term-pill">10yr</div>
+            <div class="term-pill">15yr</div>
+            <div class="term-pill">20yr</div>
+            <div class="term-pill active">25yr</div>
+            <div class="term-pill">30yr</div>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div class="res-label">Estimated Monthly Payment</div>
+          <div class="res-val">£35,204 <span style="font-size:14px;font-family:'Gill Sans',sans-serif;font-weight:400;color:rgba(255,255,255,0.55)">/month</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAMP DUTY CALCULATOR -->
+    <div class="calc-card" id="stampCalc">
+      <div class="calc-header" onclick="toggleCalc('stampCalc')">
+        <div class="calc-icon">%</div>
+        <h4>Stamp Duty Calculator</h4>
+        <span class="calc-chevron">&#8964;</span>
+      </div>
+      <div class="calc-body">
+        <div class="calc-field">
+          <label>Property Price</label>
+          <input type="text" value="£8,000,000">
+        </div>
+        <div class="calc-field">
+          <label>Purchasing In</label>
+          <select>
+            <option>England &amp; Northern Ireland</option>
+            <option selected>Wales</option>
+            <option>Scotland</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label>Buyer Type</label>
+          <select>
+            <option selected>Standard Purchase</option>
+            <option>First Time Buyer</option>
+            <option>Second Home / Buy to Let</option>
+          </select>
+        </div>
+        <div class="calc-result">
+          <div class="res-label">Estimated Stamp Duty (LTT)</div>
+          <div class="res-val">£738,450 <span style="font-size:11px;font-family:'Gill Sans',sans-serif;font-weight:400;color:rgba(255,255,255,0.55)">approx.</span></div>
+        </div>
+        <p style="font-size:10px;color:var(--mid-gray);margin-top:10px;line-height:1.6">Wales LTT rates apply. All calculations are estimates for guidance only. Consult a solicitor for exact figures.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-text">Fine <span>&amp;</span> Country</div>
+      <div class="footer-address">
+        Sophia House<br>
+        28 Cathedral Road, Pontcanna<br>
+        Cardiff, CF11 9LJ<br><br>
+        +44 29 2169 0690<br>
+        cardiff@fineandcountry.com
+      </div>
+    </div>
+    <div>
+      <h5>Properties</h5>
+      <ul>
+        <li><a href="#">Property for Sale</a></li>
+        <li><a href="#">Property to Rent</a></li>
+        <li><a href="#">New Developments</a></li>
+        <li><a href="#">Auctions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>How We Can Help</h5>
+      <ul>
+        <li><a href="#">Value My Property</a></li>
+        <li><a href="#">Find an Agent</a></li>
+        <li><a href="#">Become a Licensee</a></li>
+        <li><a href="#">Our Regional Offices</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>About Us</h5>
+      <ul>
+        <li><a href="#">Why Fine &amp; Country</a></li>
+        <li><a href="#">Blog &amp; Insights</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Join Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Fine &amp; Country 2026. All rights reserved. GPEA Limited.</span>
+    <span><a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;margin-right:16px">Privacy Policy</a><a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none">Cookie Policy</a></span>
+  </div>
+</footer>
+
+<script>
+  function toggleCalc(id) {
+    const card = document.getElementById(id);
+    card.classList.toggle('open');
+  }
+
+  function toggleFaq(questionEl) {
+    const item = questionEl.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all open FAQ items first
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    // If it wasn't open, open it
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Term pill toggle
+  document.querySelectorAll('.term-pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      this.closest('.term-pills').querySelectorAll('.term-pill').forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
